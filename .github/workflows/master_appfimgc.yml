@@ -50,4 +50,4 @@ jobs:
           app-name: 'AppFIMGC'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CEAE889C2BE642C09599D89891AFDDF9 }}
-          package: '*.jar'
+          package: 'java-app/back/spb-email-verification-demo-master/target/*.jar'  # Ruta al JAR dentro del artefacto
