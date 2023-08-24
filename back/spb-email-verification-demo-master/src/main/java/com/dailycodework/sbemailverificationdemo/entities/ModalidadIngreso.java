@@ -9,6 +9,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+//comentario chiquito
+
 @Entity
 @Table(name = "ModalidadIngreso")
 public class ModalidadIngreso implements Serializable{
