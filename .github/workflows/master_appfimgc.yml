@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'AppFIMGC'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_062DDFE681B342578CED31341C1980AA }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CEAE889C2BE642C09599D89891AFDDF9 }}
           package: '*.jar'
