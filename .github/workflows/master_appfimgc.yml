@@ -23,12 +23,14 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
+        working-directory: back/spb-email-verification-demo-master
+
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          path: '${{ github.workspace }}/back/spb-email-verification-demo-master/target/sb-email-verification-demo-0.0.1-SNAPSHOT.jar'
 
   deploy:
     runs-on: ubuntu-latest
@@ -50,4 +52,4 @@ jobs:
           app-name: 'AppFIMGC'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CEAE889C2BE642C09599D89891AFDDF9 }}
-          package: 'java-app/back/spb-email-verification-demo-master/target/*.jar'  # Ruta al JAR dentro del artefacto
+          package: 'java-app/back/spb-email-verification-demo-master/target/sb-email-verification-demo-0.0.1-SNAPSHOT.jar'  # Ruta al JAR dentro del artefacto
